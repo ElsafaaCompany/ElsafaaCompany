@@ -1,0 +1,143 @@
+input[type="checkbox"] {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 18px;
+  left: 12px;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 80;
+}
+.hamburger {
+  width: 30px;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  z-index: 22;
+}
+.hamburger > div {
+  content: "";
+  border-width: 2px;
+  border-style: solid;
+  width: 100%;
+  opacity: 0.5;
+  top: 10;
+  left: 10;
+  z-index: 22;
+  border-color: black;
+}
+
+.hamburger > div::after {
+  position: absolute;
+  content: "";
+  border-width: 2px;
+  border-style: solid;
+  width: 100%;
+  z-index: 22;
+  top: 10px;
+  left: 0;
+  border-color: black;
+}
+
+.hamburger > div::before {
+  position: absolute;
+  content: "";
+  border-width: 2px;
+  border-style: solid;
+  width: 100%;
+
+  top: 20px;
+  left: 0;
+  border-color: black;
+}
+.menu {
+  position: fixed;
+  z-index: 49;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100%;
+  width: 80%;
+  display: inline-block;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in;
+}
+
+input[type="checkbox"]:checked ~ .menu {
+  transform: translateX(0);
+}
+input[type="checkbox"]:checked {
+  position: fixed;
+  z-index: 60;
+  border: none;
+  top: 0px;
+  left: 0px;
+}
+
+.menu > ul {
+  position: fixed;
+  top: 1em;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  list-style: none;
+}
+.menu > ul > li {
+  margin-top: 5em;
+  margin: 2em auto 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  width: 80%;
+}
+
+.menu > ul > li > a {
+  text-decoration: none;
+  color: black;
+  opacity: 1;
+  font-weight: bold;
+  padding-left: 2em;
+  text-align: left;
+  padding: 0;
+}
+
+.menu > ul > div {
+  content: "";
+  position: relative;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+  height: 1px;
+  opacity: 1;
+  background-color: black;
+  top: 0px;
+  left: 5px;
+  transform: rotateZ(45deg);
+}
+
+.menu > ul > div::after {
+  content: "";
+  height: 1px;
+  width: 20px;
+  opacity: 1;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateZ(90deg);
+}
+
+.all-list {
+  position: fixed;
+  top: 25px;
+  left: 0px;
+  z-index: 22;
+}
+
+input[type="checkbox" i] {
+  border: none;
+  background-color: none;
+  padding: 0;
+  margin: 0;
+}
