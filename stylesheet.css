@@ -11,7 +11,7 @@ header {
   height: 50px;
   width: 100%;
   padding: 0;
-  display: block;
+  display: inline-table;
   margin: 0;
   position: fixed;
   top: 0;
@@ -38,6 +38,7 @@ header a > h1 {
 header > h1 {
   position: fixed;
   top: 0px;
+  display: inline-table;
 }
 header a:hover {
   text-decoration: underline;
@@ -48,7 +49,9 @@ header > img {
   position: fixed;
   right: 0;
   top: 10px;
-  float: right;
+}
+header > h1 {
+  width: 100%;
 }
 
 main {
@@ -69,11 +72,10 @@ main > div > img {
 
 main > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
-  height: 250px;
-  position: relative;
+  height: auto;
 }
 h1 {
   font-size: x-large;
@@ -109,15 +111,66 @@ h1 {
 }
 
 .mechain-sec {
-  width: 70%;
+  width: 85%;
   margin: auto;
 }
 
 .mechain-sec > img {
   width: 100%;
   height: 400px;
+  transition: all 0.3s;
+}
+.mechain-sec > img:hover {
+  opacity: 0.7;
 }
 
 a > svg {
   padding-left: 1em;
+}
+
+.about-comp > div > img {
+  width: 90%;
+  margin: auto;
+  padding: auto;
+  justify-content: center;
+  text-align: center;
+}
+footer {
+  background-color: black;
+  color: white !important;
+}
+
+.footerPage {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+.footerPage > div {
+  padding: 1em;
+}
+
+.footerPage > div > ul > li > a {
+  color: white !important;
+  text-align: center;
+}
+
+.footerPage > div > ul > li {
+  list-style-type: none;
+  padding-top: 5px;
+}
+
+.footerPage > div > ul {
+  padding: 0;
+  margin: 0;
+}
+.footerPage > div > ul > li:first-child:hover > a {
+  color: #3b5998 !important;
+  text-align: center;
+}
+
+.youtube:hover > a {
+  color: red !important;
+  text-align: center;
 }
