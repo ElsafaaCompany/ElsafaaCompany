@@ -91,13 +91,13 @@ h1 {
 
 .about-comp > div > div {
   border: 1px solid rgba(0, 0, 0, 0.4);
-  border-radius: 2em;
+ 
   padding-right: 1em;
   text-align: right;
 }
 
 .trus-sec {
-  width: 70%;
+  width: 85%;
   margin: 2em auto;
 }
 .trus-sec > img {
